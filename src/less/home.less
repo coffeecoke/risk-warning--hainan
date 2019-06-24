@@ -12,13 +12,86 @@
         padding:20px;
         .header-right-top{
             width:100%;
-            height:274px;
+            height:auto;
             border-radius: 5px;
             padding:10px;
             background: #113493;
+            overflow: hidden;
             .box-summarize-left{
                 width:130px;
                 float: left;
+                .box-title{
+                    h4{
+                        color:#fff;
+                    }
+                }
+                .box-content{
+                    padding:20px 0;
+                    border-right:dashed 1px #ccc;
+                    span{
+                        text-align: center;
+                        display: block;
+                        color:#fff;
+                        padding:10px 0 0px;
+                    }
+                    img{
+                        text-align: center;
+                        display: block;
+                        margin:0 auto;
+                    }
+                    .num{
+                        font-size:22px;
+                    }
+                }
+            }
+            .box-summarize-right{
+                margin-left:140px;
+                padding:10px;
+                .summarize-list{
+                    display: flex;
+                    justify-content: center;
+                    border-bottom:solid 1px #5077c6;
+                    li{
+                        color:#fff;
+                        padding:10px;
+                        font-size:12px;
+                        &.active{
+                            border-bottom:solid 1px #fff;
+                        }
+                    }
+                }
+                .box-content{
+                    .summarize-risk{
+                        li{
+                            padding:4px 0;
+                            span{
+                                color:#fff;
+                                font-size:12px;
+                                text-align: left;
+                                display: inline-block;
+                            }
+                            .conmpany-type{
+                                width:120px;
+                                padding-left:20px;
+                            }
+                            .risk1{
+                                background: url("../imgs/circular-red.png")no-repeat center left;
+                            }
+                            .risk2{
+                                background: url("../imgs/circular-orange.png")no-repeat center left;
+                            }
+                            .risk3{
+                                background: url("../imgs/circular-yellow.png")no-repeat center left;
+                            }
+                            .risk4{
+                                background: url("../imgs/circular-blue.png")no-repeat center left;
+                            }
+                            .risk5{
+                                background: url("../imgs/circular-green.png")no-repeat center left;
+                            }
+                        }
+                    }
+                }
             }
         }
         .header-right-bottom{
@@ -49,4 +122,74 @@
             }
         }
     }
+}
+.home-container-bottom{
+    margin-top:20px;
+    display: flex;
+    .box{
+        padding:0 10px;
+        .box-con{
+            padding:20px;
+            border-radius: 5px;
+            border:solid 1px #ccc;
+        }
+    }
+    .lb{
+        width:30%;
+    }
+    .cb{
+        width:45%;
+    }
+    .rb{
+        width:25%;
+    }
+}
+.box-title{
+    .num{
+        float: right;
+        width:40px;
+        height:20px;
+        background: url("../imgs/disc.png") no-repeat center;
+    }
+}
+.data-all{
+    li{
+        padding:4px 0;
+        span{
+            font-size:14px;
+            text-align: left;
+            display: inline-block;
+        }
+        .conmpany-type{
+            color:#aaaaaa;
+            width:120px;
+        }
+    }
+}
+.progress_bar .pro-bar {
+    margin-left:0;
+    height:10px;
+    border-radius:4px;
+    box-shadow: 0 0 20px #849ade;
+    margin-bottom:26px;
+}
+.progress_bar .progress_number {
+    margin-top: -40px;
+}
+.progress_bar .progress_bar_title  {
+    top:-36px;
+    color:#000;
+    .progress_number {
+        color:#ff834e;
+        font-size:22px;
+    }
+}
+.progress_bar .progress-bar-inner {
+    border-radius:4px;
+    background:linear-gradient(left,#fec162,#ff834e) !important; 
+    
+}
+.progress_bar .progress-bar-inner:after,
+.progress_bar .progress-bar-inner:before {
+    display:none;
 }

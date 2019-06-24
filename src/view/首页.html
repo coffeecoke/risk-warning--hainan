@@ -22,12 +22,41 @@
                         </div>
                         <div class="box-content">
                             <img src="../imgs/icon.png" alt="">
-                            <span>10000</span>
+                            <span class="num">10000</span>
                             <span>企业总数</span>
                         </div>
                     </div>
                     <div class="box-summarize-right">
-
+                        <div class="box-title">
+                            <ul class="summarize-list">
+                                <li>海南省</li>
+                                <li class="active">屯昌市</li>
+                            </ul>
+                        </div>
+                        <div class="box-content">
+                            <ul class="summarize-risk">
+                                <li>
+                                    <span class="conmpany-type risk1">高风险企业</span>
+                                    <span>20家</span>
+                                </li>
+                                <li>
+                                    <span class="conmpany-type risk2">中高风险企业</span>
+                                    <span>30家</span>
+                                </li>
+                                <li>
+                                    <span class="conmpany-type risk3">中风险企业</span>
+                                    <span>30家</span>
+                                </li>
+                                <li>
+                                    <span class="conmpany-type risk4">中低风险企业</span>
+                                    <span>30家</span>
+                                </li>
+                                <li>
+                                    <span class="conmpany-type risk5">低风险企业</span>
+                                    <span>30家</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="header-right-bottom">
@@ -52,9 +81,75 @@
                 </div>
             </div>
         </div>
+        <div class="home-container-bottom">
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">基本信息<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="progress_bar">
+                        <div class="pro-bar">
+                            <smal class="progress_bar_title">
+                            设备总数
+                            <span class="progress_number">40%</span>
+                            </smal>
+                            <span class="progress-bar-inner" style="width: 40%;" data-value="500" data-percentage-value="500"></span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box cb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">风险处置情况<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="echarts" id="lineChart" style="width:100%;height:180px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box rb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">数据采集总量<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <ul class="data-all">
+                            <li>
+                                <span class="conmpany-type risk1">工商数据:</span>
+                                <span>1092837条</span>
+                            </li>
+                            <li>
+                                <span class="conmpany-type risk2">司法数据：</span>
+                                <span>57条</span>
+                            </li>
+                            <li>
+                                <span class="conmpany-type risk3">经营数据：</span>
+                                <span>2837条</span>
+                            </li>
+                            <li>
+                                <span class="conmpany-type risk4">周边风险数据：</span>
+                                <span>837条</span>
+                            </li>
+                            <li>
+                                <span class="conmpany-type risk5">企业采集数据：</span>
+                                <span>37条</span>
+                            </li>
+                            <li>
+                                <span class="conmpany-type risk5">举报数据：</span>
+                                <span>837条</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../js/jquery-1.8.3.min.js"></script>
     <script src="../js/echarts.js"></script>
+    <script src="../js/lineChart.js"></script>
     <!-- <script src="../js/mapChart.js"></script> -->
 </body>
 </html>
