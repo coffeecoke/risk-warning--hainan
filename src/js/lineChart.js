@@ -93,7 +93,7 @@ $(function(){
                 name: '预警信息',
                 type: 'line',
                 smooth: false,
-                data: [25, 60, 20, 80, 23, 42],
+                data: [100, 150, 20, 80, 23, 42],
                 lineStyle: {
                     normal: {
                         color: '#4888f8'
@@ -104,7 +104,7 @@ $(function(){
                 name: '线索',
                 type: 'line',
                 smooth: false,
-                data: [50, 40, 70, 60, 100, 80],
+                data: [50, 100, 70, 60, 100, 80],
                 lineStyle: {
                     normal: {
                         color: '#ff6976'
@@ -115,7 +115,7 @@ $(function(){
                 name: '领导交办',
                 type: 'line',
                 smooth: false,
-                data: [20, 50, 100, 150, 200, 250],
+                data: [75, 50, 100, 150, 200, 250],
                 lineStyle: {
                     normal: {
                         color: '#fed478'
