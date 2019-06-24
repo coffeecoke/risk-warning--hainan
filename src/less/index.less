@@ -94,7 +94,8 @@
 }
 .nav-list {
     li {
-      height:50px;
+      padding:5px 0;
+      // height:50px;
       cursor: pointer;
       a {
         display: flex;
@@ -143,6 +144,41 @@
   z-index:10;
   border-radius: 4px;
   display:none;
+  padding:0px 20px;
+  li{
+    a{
+      padding:2px 30px;
+      background:url("../imgs/trun-left.png") no-repeat center left;
+      &.active{
+        background:url("../imgs/trun-down.png") no-repeat center left;
+      }
+    }
+  }
+}
+.third-menu {
+  display: none;
+  padding:0 40px;
+  li{
+    padding:5 30px;
+    a{
+      padding:5 30px;
+      background:url("../imgs/trun-left.png") no-repeat center left;
+    }
+  }
+}
+.four-menu{
+  display: none;
+}
+li{
+  list-style: none;
+}
+.four-menu {
+  li{
+    padding:5px 30px;
+    a{
+      background: none;
+    }
+  }
 }
 .right-main {
   position: absolute;

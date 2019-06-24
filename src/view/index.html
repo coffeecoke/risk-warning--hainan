@@ -35,7 +35,34 @@
               <span>HOME</span>
             </a>
             <ul class="second-menu">
-
+                <li>
+                    <a href="##">二级页面</a>
+                    <ul class="third-menu">
+                      <li>
+                        <a href="##">三级页面</a>
+                        <ul class="four-menu">
+                            <li>
+                              <a href="##">四级页面</a>
+                            </li>
+                            <li>
+                              <a href="##">四级页面</a>
+                            </li>
+                            <li>
+                              <a href="##">四级页面</a>
+                            </li>
+                            <li>
+                              <a href="##">四级页面</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="##">三级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">三级页面</a>
+                      </li>
+                    </ul>
+                  </li>
             </ul>
           </li>
           <li>
@@ -133,6 +160,10 @@
 <script src="../plugins/jerichotab/jquery.jerichotab.js"></script>
 <script>
   $(function () {
+    $(".second-menu li a").click(function(){
+      $(this).siblings("ul").toggle();
+      $(this).toggleClass("active");
+    })
     $('.main').height($(window).height() - $('.header').outerHeight())
     $.fn.initJerichoTab({
       renderTo: '.right-main',
@@ -152,17 +183,10 @@
         {
           title: '测试',
           closeable: true,
-<<<<<<< HEAD
           iconImg: '',
           data: {
             dataType: 'iframe',
             dataLink: '测试.html'
-=======
-          iconImg:'',
-          data:{
-            dataType:'iframe',
-            dataLink:'首页.html'
->>>>>>> 5c428c59b3a8c4400ab2d6b0664772a29cd743e4
           }
         }
       ]
