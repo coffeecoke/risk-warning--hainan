@@ -93,7 +93,7 @@
   position:relative;
 }
 .nav-list {
-    li {
+    &> li {
       padding:5px 0;
       // height:50px;
       cursor: pointer;
@@ -117,7 +117,7 @@
       &.active,
       &:hover {
         background-color:#fff;
-        a {
+        & > a {
           
           color:#0d2f91;
           &:before {
@@ -134,7 +134,7 @@
     }
 }
 .second-menu {
-  width:462px;
+  width:262px;
   min-height:500px;
   background-color:#fff;
   box-shadow:0 0 8px #ccc;
@@ -147,7 +147,7 @@
   padding:0px 20px;
   li{
     a{
-      padding:2px 30px;
+      padding:2px 20px;
       background:url("../imgs/trun-left.png") no-repeat center left;
       &.active{
         background:url("../imgs/trun-down.png") no-repeat center left;
@@ -160,7 +160,7 @@
 }
 .third-menu {
   display: none;
-  padding:0 40px;
+  padding:0 20px;
   li{
     padding:5 30px;
     a{
@@ -180,7 +180,7 @@ li{
 }
 .four-menu {
   li{
-    padding:5px 30px;
+    padding:5px 10px;
     a{
       background: none;
     }
