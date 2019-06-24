@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../plugins/jerichotab/jquery.jerichotab.css">
 </head>
+
 <body>
   <div class="wrap">
     <div class="header">
@@ -25,7 +27,104 @@
       </div>
     </div>
     <div class="main">
-      <div class="left-side"></div>
+      <div class="left-side">
+        <ul class="nav-list">
+          <li class="active">
+            <a href="##">
+              <h3>首页</h3>
+              <span>HOME</span>
+            </a>
+            <ul class="second-menu">
+
+            </ul>
+          </li>
+          <li>
+            <a href="##">
+              <h3>数据报送</h3>
+              <span>DATA dELIVERY</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>数据采集</h3>
+              <span>DATA ACQUISITION</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>数据中心</h3>
+              <span>DATA CENTER</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>风险处置</h3>
+              <span>RISK DISPOSAL</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>风险监测</h3>
+              <span>RISK MONITORING</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>风险预警</h3>
+              <span>RISK EARLY WARNING</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>智能分析</h3>
+              <span>INTELLIGEN ANALYSIS</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>风险建模</h3>
+              <span>RISK MODELING</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>综合查询</h3>
+              <span>COMPREHENSIVE QUERY</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>系统管理</h3>
+              <span>SYSTEM MANAGEMENT</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>运维管理</h3>
+              <span>MOCHA ITOM</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>文件交换</h3>
+              <span>FILE EXCHANGE</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>登记备案</h3>
+              <span>REGISTRATION AND FILING</span>
+            </a>
+          </li>
+          <li>
+            <a href="##">
+              <h3>企业评级</h3>
+              <span>ENTERPRISE RATING</span>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
       <div class="right-main"></div>
     </div>
   </div>
@@ -33,35 +132,55 @@
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../plugins/jerichotab/jquery.jerichotab.js"></script>
 <script>
-  $(function (){
-    $('.main').height($(window).height()-$('.header').outerHeight())
+  $(function () {
+    $('.main').height($(window).height() - $('.header').outerHeight())
     $.fn.initJerichoTab({
-      renderTo:'.right-main',
-      uniqueId:'myJerichoTab',
-      contentCss:{
-        'height':$('.right-main').height()-40
+      renderTo: '.right-main',
+      uniqueId: 'myJerichoTab',
+      contentCss: {
+        'height': $('.right-main').height() - 40
       },
-      tabs:[
-        {
-          title:'首页',
+      tabs: [{
+          title: '企业详情',
           closeable: false,
-          iconImg:'',
-          data:{
-            dataType:'iframe',
-            dataLink:'企业详情.html'
+          iconImg: '',
+          data: {
+            dataType: 'iframe',
+            dataLink: '企业详情.html'
           }
         },
         {
-          title:'测试',
+          title: '测试',
           closeable: true,
+<<<<<<< HEAD
+          iconImg: '',
+          data: {
+            dataType: 'iframe',
+            dataLink: '测试.html'
+=======
           iconImg:'',
           data:{
             dataType:'iframe',
             dataLink:'首页.html'
+>>>>>>> 5c428c59b3a8c4400ab2d6b0664772a29cd743e4
           }
         }
       ]
     })
+    // 左侧导航
+    $('.nav-list > li').hover(function() {
+      $('.second-menu').hide();
+      $(this).find('.second-menu').show()
+    })
+    $('document').on('click',function() {
+      
+      $('.second-menu').hide();
+    })
+    $('.second-menu').on('click',function(e) {
+      e.stopPropagation()
+      $(this).hide()
+    })
   })
 </script>
+
 </html>
