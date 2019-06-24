@@ -63,6 +63,9 @@
                       </li>
                     </ul>
                   </li>
+                  <li>
+                      <a href="##">二级页面111</a>
+                  </li>
             </ul>
           </li>
           <li>
@@ -160,6 +163,11 @@
 <script src="../plugins/jerichotab/jquery.jerichotab.js"></script>
 <script>
   $(function () {
+    $(".second-menu li a").each(function(){
+      if($(this).parent().children('ul').length<1){
+        $(this).addClass("hovers");
+      }
+    })
     $(".second-menu li a").click(function(){
       $(this).siblings("ul").toggle();
       $(this).toggleClass("active");
