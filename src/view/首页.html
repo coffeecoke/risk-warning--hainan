@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,13 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
     <div class="home-container">
         <div class="home-container-header clearfix">
             <div class="home-header-left">
                 <div class="map-chart" id="map"></div>
+
             </div>
             <div class="home-header-right">
                 <div class="header-right-top">
@@ -45,15 +48,15 @@
                                 </li>
                                 <li>
                                     <span class="conmpany-type risk3">中风险企业</span>
-                                    <span>30家</span>
+                                    <span>40家</span>
                                 </li>
                                 <li>
                                     <span class="conmpany-type risk4">中低风险企业</span>
-                                    <span>30家</span>
+                                    <span>200家</span>
                                 </li>
                                 <li>
                                     <span class="conmpany-type risk5">低风险企业</span>
-                                    <span>30家</span>
+                                    <span>590家</span>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +91,56 @@
                         <h3 class="box-title">基本信息<span class="num"></span></h3>
                     </div>
                     <div class="box-body">
-                       
+                        <div class="progress_bar red-bar">
+                            <div class="pro-bar">
+                                <smal class="progress_bar_title">
+                                    设备总数
+                                    <span class="progress_number">98</span>
+                                </smal>
+                                <span class="progress-bar-inner" style="width: 40%;" data-value="500"
+                                    data-percentage-value="500"></span>
+                            </div>
+                        </div>
+                        <div class="progress_bar red-bar">
+                            <div class="pro-bar">
+                                <smal class="progress_bar_title">
+                                    设备总数
+                                    <span class="progress_number">90</span>
+                                </smal>
+                                <span class="progress-bar-inner" style="width: 40%;" data-value="500"
+                                    data-percentage-value="500"></span>
+                            </div>
+                        </div>
+                        <div class="progress_bar orange-bar">
+                            <div class="pro-bar">
+                                <smal class="progress_bar_title">
+                                    设备总数
+                                    <span class="progress_number">82</span>
+                                </smal>
+                                <span class="progress-bar-inner" style="width: 82%;" data-value="500"
+                                    data-percentage-value="500"></span>
+                            </div>
+                        </div>
+                        <div class="progress_bar yellow-bar">
+                            <div class="pro-bar">
+                                <smal class="progress_bar_title">
+                                    设备总数
+                                    <span class="progress_number">76</span>
+                                </smal>
+                                <span class="progress-bar-inner" style="width: 76%;" data-value="500"
+                                    data-percentage-value="500"></span>
+                            </div>
+                        </div>
+                        <div class="progress_bar blue-bar">
+                            <div class="pro-bar">
+                                <smal class="progress_bar_title">
+                                    设备总数
+                                    <span class="progress_number">45</span>
+                                </smal>
+                                <span class="progress-bar-inner" style="width: 45%;" data-value="500"
+                                    data-percentage-value="500"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,7 +150,8 @@
                         <h3 class="box-title">风险处置情况<span class="num"></span></h3>
                     </div>
                     <div class="box-body">
-                        <div class="echarts" id="lineChart" style="width:100%;height:250px;"></div>
+                        <div class="echarts" id="lineChart" style="width:100%;height:100%;"></div>
+
                     </div>
                 </div>
             </div>
@@ -145,5 +198,7 @@
     <!-- <script src="../js/mapChart.js"></script> -->
     <script src="../js/hn_zdy.js"></script>
     <script src="../js/map-chart.js"></script>
+    <script src="../js/closeSecondMenu.js"></script>
 </body>
+
 </html>
