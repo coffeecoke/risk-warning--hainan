@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>企业详情</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/business-details.css">
+</head>
+
+<body>
+  <div class="business-details-container">
+    <div class="banner">
+      <ul class="breadcrumb">
+        <li><a href="#">风险预警系统</a> <span class="divider"> > </span></li>
+        <li><a href="#">企业全息画像</a> <span class="divider"> > </span></li>
+        <li class="active">企业详情</li>
+      </ul>
+      <div class="banner-center clearfix">
+        <div class="company-info">
+          <div>
+            <h3 class="company-name">海南华尔街小额贷款有限公司</h3>
+            <span class="platform-name">(平台名称：华尔街)</span>
+            <div class="company-tags">
+              <span class="tag">存寄</span>
+              <span class="tag">小额贷款公司</span>
+            </div>
+          </div>
+          <p>
+            <span>注册资本:5000万元</span>
+            <span>注册地址:秀东路6号王海国际广场2019房</span>
+          </p>
+        </div>
+        <ol class="operating">
+          <li class="operating-item download">下载风险报告</li>
+          <li class="operating-item view">查看下载报告</li>
+          <li class="operating-item join1">加入重点监测</li>
+          <li class="operating-item join2">加入白名单</li>
+        </ol>
+      </div>
+      <ul class="tabs" id="tabs">
+        <li class="active" data-href="风险概览.html">风险概览</li>
+        <li class="" data-href="工商信息.html">工商信息</li>
+        <li class="" data-href="司法风险.html">司法风险</li>
+        <li class="" data-href="经营风险.html">经营风险</li>
+        <li class="" data-href="舆情风险.html">舆情风险</li>
+        <li class="" data-href="关联分析.html">关联分析</li>
+      </ul>
+    </div>
+    <div class="iframe-content">
+      <iframe src="风险概览.html" frameborder="0" scrolling="auto" style="width: 100%; height: 100%; border: 0px;"></iframe>
+    </div>
+  </div>
+
+  <script src="../js/jquery-1.8.3.min.js"></script>
+  <script>
+    $(function () {
+      $(window).load(function() {
+        $('.iframe-content').height($(window).height()-$('.banner').outerHeight()-10)
+      })
+      $('.tabs').on('click','li',function () {
+        var href = $(this).data('href');
+        $(this).addClass('active').siblings().removeClass('active')
+        $('.iframe-content iframe').attr('src',href)
+      })
+    })
+  </script>
+</body>
+
+</html>

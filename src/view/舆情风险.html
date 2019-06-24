@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>舆情风险</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/lyric-risk.css">
+  <link rel="stylesheet" href="../plugins/pagination/css/pagination.css">
+</head>
+
+<body>
+  <div class="lyric-risk-container">
+    <div class="lyric-info">
+      <div class="lyric-info__header">
+        <h3 class="lyric-info__title">舆情信息</h3>
+        <div class="lyric-nav">
+          <span>风险便签：</span>
+          <ul>
+            <li class="active">全部</li>
+            <li>疑似对付困难</li>
+            <li>疑似跑路</li>
+            <li>疑似自融</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="lyric-list">
+        <li>
+          <div class="lyric-list__title">
+            <h3>人人贷发布2018年财报：营收9.96亿 连续三年盈利</h3>
+            <span class="tag">网站打不开</span>
+          </div>
+          <p>人人贷（人人贷商务顾问(北京)有限公司）在其官网发布了2018年财务报表审计报告（2018年财报）。</p>
+          <p>
+            <span>转载：新浪微博</span>
+            <span>时间：2019-06-06</span>
+          </p>
+        </li>
+        <li>
+          <div class="lyric-list__title">
+            <h3>人人贷发布2018年财报：营收9.96亿 连续三年盈利</h3>
+            <span class="tag">网站打不开</span>
+          </div>
+          <p>人人贷（人人贷商务顾问(北京)有限公司）在其官网发布了2018年财务报表审计报告（2018年财报）。</p>
+          <p>
+            <span>转载：新浪微博</span>
+            <span>时间：2019-06-06</span>
+          </p>
+        </li>
+        <li>
+          <div class="lyric-list__title">
+            <h3>人人贷发布2018年财报：营收9.96亿 连续三年盈利</h3>
+            <span class="tag">网站打不开</span>
+          </div>
+          <p>人人贷（人人贷商务顾问(北京)有限公司）在其官网发布了2018年财务报表审计报告（2018年财报）。</p>
+          <p>
+            <span>转载：新浪微博</span>
+            <span>时间：2019-06-06</span>
+          </p>
+        </li>
+        <li>
+          <div class="lyric-list__title">
+            <h3>人人贷发布2018年财报：营收9.96亿 连续三年盈利</h3>
+            <span class="tag">网站打不开</span>
+          </div>
+          <p>人人贷（人人贷商务顾问(北京)有限公司）在其官网发布了2018年财务报表审计报告（2018年财报）。</p>
+          <p>
+            <span>转载：新浪微博</span>
+            <span>时间：2019-06-06</span>
+          </p>
+        </li>
+      </ul>
+
+      <div class="pages clearfix">
+        <div id="Pagination"></div>
+        <div class="searchPage">
+          <span class="page-sum">共<strong class="allPage">15</strong>页</span>
+          <span class="page-go">GOTO<input type="text"></span>
+          <a href="javascript:;" class="page-btn">确定</a>
+        </div>
+      </div>
+    </div>
+    <div class="lyric-risk__right">
+      <div class="lyric-analysis">
+        <h3 class="block-title">风险标签</h3>
+        <div class="line-chart" id="lineChart" style="width:100%;height:200px"></div>
+      </div>
+      <!-- 风险标签 -->
+      <div class="risk-label">
+        <h3 class="block-title">风险标签</h3>
+        <ul>
+          <li>网站打不开(234)</li>
+          <li>疑似跑路(24)</li>
+          <li>疑似虚假平台(45)</li>
+         
+        </ul>
+      </div>
+      <!-- /.风险标签 -->
+    </div>
+  </div>
+  <script src="../js/jquery-1.8.3.min.js"></script>
+  <script src="../js/echarts.js"></script>
+  <script src="../js/jquery.pagination.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#Pagination").pagination(15, {
+        prev_text: "<",
+        next_text: '>'
+      });
+    });
+
+    $(function () {
+      var myChart = echarts.init(document.getElementById('lineChart'));
+      var option = {
+        xAxis: {
+          type: 'category',
+          data: ['201902', '201903', '201904', '201905', '201906']
+        },
+        yAxis: {
+          type: 'value',
+          min: 0,
+          // max: 120
+          splitLine: {
+            lineStyle: {
+              color: '#cecece',
+              type: 'dashed'
+            }
+          }
+        },
+        grid: {
+          top: '10%',
+          left: '2%',
+          right: '2%',
+          bottom: 0,
+          containLabel: true
+        },
+        series: [{
+          data: [90, 60, 100, 40, 50, 90],
+          type: 'line',
+          // smooth: true,
+          itemStyle: {
+            normal: {
+              color: '#4e6ab2',
+              lineStyle: {
+                color: "#4e6ab2"
+                // width: 1
+              },
+              areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                  offset: 0,
+                  color: '#fff'
+                }, {
+                  offset: 1,
+                  color: '#677db8'
+                }]),
+              }
+            }
+          }
+        }]
+      };
+      myChart.setOption(option);
+      $(window).resize(function () {
+        myChart.resize();
+      })
+    })
+  </script>
+</body>
+
+</html>

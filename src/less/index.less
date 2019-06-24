@@ -1,0 +1,109 @@
+.header {
+  height:136px;
+  background-color:#1d3f98;
+  .logo {
+    width:140px;
+    height:104px;
+    background:url(../imgs/logo.png) center no-repeat;
+    float:left;
+    margin-top:18px;
+    margin-left:20px;
+  }
+}
+.header-right {
+  float:right;
+  margin-right:24px;
+  .form-group {
+    display:inline-block;
+    margin-top:12px;
+    position: relative;
+  }
+  .form-control {
+    width:202px;
+    height:34px;
+    border:1px solid #072887;
+    background-color:#163caa;
+    border-radius: 17px;
+    color:#aebbe2;
+    outline: none;
+    padding-left:20px;
+    &::-webkit-input-placeholder {
+      color:#aebbe2;
+    }
+  }
+  .search-btn {
+    width:34px;
+    height:34px;
+    position: absolute;
+    right:0;
+    top:0;
+    background: url(../imgs/search-icon.png) center no-repeat;
+  }
+  .clock-icon {
+    width:18px;
+    height:18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin:0 20px;
+    background:url(../imgs/lock-icon.png) center no-repeat;
+   
+  }
+  .alarm-icon {
+    width:18px;
+    height:18px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin:0 20px;
+    background:url(../imgs/alarm-icon.png) center no-repeat;
+    &.active:before {
+      content:'';
+      position: absolute;
+      width:8px;
+      height:8px;
+      border-radius: 50%;
+      background-color:#d43131;
+      right:-4px;
+      top:-4px;
+    }
+  }
+  .date {
+    color:#fff;
+    font-size:14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:20px;
+  }
+  .user {
+    color:#fff;
+    font-size:14px;
+    display:inline-block;
+    vertical-align: middle;
+    
+  }
+}
+.main {
+  position: relative;
+}
+.left-side {
+  width:184px;
+  height:100%;
+  background-color:#f7f7f7;
+}
+.right-main {
+  position: absolute;
+  left:184px;
+  right:18px;
+  bottom:0;
+  top:-85px;
+}
+.jericho_tab .tab_content {
+  background-color:#fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  iframe {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+}

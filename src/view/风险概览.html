@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>风险概览</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/risk-preview.css">
+</head>
+
+<body>
+  <div class="risk-preview-container">
+    <div class="risk-preview__left">
+      <!-- 融点指数 -->
+      <div class="melting-index">
+        <h3 class="block-title">融点指数</h3>
+        <div class="index-info">
+          <div class="index-num">85.76</div>
+          <div class="index-tag">高风险</div>
+          <div class="index-tag">处理中</div>
+        </div>
+        <p class="end-time">截止时间 2019/06/10</p>
+
+        <div class="line-chart" id="linechart" style="width:100%;height:220px"></div>
+      </div>
+      <!-- /.融点指数 -->
+
+      <!-- 风险标签 -->
+      <div class="risk-label">
+        <h3 class="block-title">风险标签</h3>
+        <ul>
+          <li>网站打不开(234)</li>
+          <li>疑似跑路(24)</li>
+          <li>疑似虚假平台(45)</li>
+          <li>法律诉讼记录(32)</li>
+          <li>疑似传销(12)</li>
+          <li>疑似虚假平台(32)</li>
+          <li>疑似虚假平台(32)</li>
+          <li>疑似虚假平台(32)</li>
+        </ul>
+      </div>
+      <!-- /.风险标签 -->
+    </div>
+
+
+    <!-- 风险维度 -->
+    <div class="risk-dimension">
+      <h3 class="block-title">风险标签</h3>
+      <div class="radar-chart" id="radarChart" style="width:100%;height:300px;"></div>
+    </div>
+    <!-- /.风险维度 -->
+  </div>
+
+  <script src="../js/jquery-1.8.3.min.js"></script>
+  <script src="../js/echarts.js"></script>
+  <script>
+    $(function () {
+      var myChart = echarts.init(document.getElementById('linechart'));
+      var option = {
+        xAxis: {
+          type: 'category',
+          data: ['201812', '201901', '201902', '201903', '201904', '201905']
+        },
+        yAxis: {
+          type: 'value',
+          min: 0,
+          // max: 120
+          splitLine: {
+            lineStyle: {
+              color: '#cecece',
+              type: 'dashed'
+            }
+          }
+        },
+        grid: {
+          top: '10%',
+          left: '2%',
+          right: '2%',
+          bottom: 0,
+          containLabel: true
+        },
+        series: [{
+          data: [70, 60, 100, 10, 50, 90],
+          type: 'line',
+          // smooth: true,
+          itemStyle: {
+            color: '#28489b'
+          }
+        }]
+      };
+      myChart.setOption(option);
+      $(window).resize(function () {
+        myChart.resize();
+      })
+    })
+
+    $(function () {
+      var myChart = echarts.init(document.getElementById('radarChart'));
+      var option = {
+        
+        tooltip: {
+          trigger: 'axis'
+        },
+        radar: {
+          indicator: [{
+            text: '负面信息\n 100',
+            max: 100
+          }, {
+            text: '机构资质可疑\n 100',
+            max: 100
+          }, {
+            text: '行为异常\n 100',
+            max: 100
+          }, {
+            text: '产品信息异常\n 100',
+            max: 100
+          }, {
+            text: '浮夸宣传\n 100',
+            max: 100
+          },{
+            text: '关联企业可疑\n 100',
+            max: 100
+          }],
+          splitNumber: 4,
+          name: {
+            textStyle: {
+              color: '#000'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#fff',
+              width: 2,
+              type: 'dotted'
+            },
+          },
+          splitLine: {
+            lineStyle: {
+              color: ['#d9dfee'],
+              width: 2
+            }
+          },
+          splitArea: {
+            areaStyle: {
+              color: ['#fff']
+            }
+          }
+        },
+        series: [{
+          type: 'radar',
+          // tooltip: {
+          //   trigger: 'item'
+          // },
+          symbol: 'circle',
+          symbolSize: 0,
+          itemStyle: {
+            normal: {
+              //color: '',
+               //borderColor: 'yellow'
+            }
+          },
+          areaStyle: {
+            normal: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 0,
+                [{
+                  offset: 0,
+                  color: '#3b63ab'
+                }, {
+                  offset: 1,
+                  color: '#0e3091'
+                }], false)
+            }
+          },
+          lineStyle: {
+            normal: {
+                color: '#0018ff',
+                type: 'solid',
+                width: 1
+            }
+          },
+          data: [{
+            value: [60, 33, 15, 50, 100,30],
+            name: '风险维度'
+          }]
+        }, ]
+      };
+      myChart.setOption(option);
+      $(window).resize(function () {
+        myChart.resize();
+      })
+    })
+  </script>
+</body>
+
+</html>

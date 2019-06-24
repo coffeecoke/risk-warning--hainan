@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>海南风险监测预警平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../plugins/jerichotab/jquery.jerichotab.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="header-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="输入企业">
+          <span class="search-btn"></span>
+        </div>
+        <span class="clock-icon"></span>
+        <span class="alarm-icon active"></span>
+        <span class="date">2019年6月6日 星期四</span>
+        <span class="user">甘素娟,您好~</span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left-side"></div>
+      <div class="right-main"></div>
+    </div>
+  </div>
+</body>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../plugins/jerichotab/jquery.jerichotab.js"></script>
+<script>
+  $(function (){
+    $('.main').height($(window).height()-$('.header').outerHeight())
+    $.fn.initJerichoTab({
+      renderTo:'.right-main',
+      uniqueId:'myJerichoTab',
+      contentCss:{
+        'height':$('.right-main').height()-40
+      },
+      tabs:[
+        {
+          title:'首页',
+          closeable: false,
+          iconImg:'',
+          data:{
+            dataType:'iframe',
+            dataLink:'企业详情.html'
+          }
+        },
+        {
+          title:'测试',
+          closeable: true,
+          iconImg:'',
+          data:{
+            dataType:'iframe',
+            dataLink:'测试.html'
+          }
+        }
+      ]
+    })
+  })
+</script>
+</html>
