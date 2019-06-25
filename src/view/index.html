@@ -204,9 +204,11 @@
       ]
     })
     // 左侧导航
-    $('.nav-list > li').hover(function() {
+    $('.nav-list > li').mouseenter(function() {
       $('.second-menu').hide();
       $(this).find('.second-menu').show()
+    }).mouseleave(function(){
+      $('.second-menu').hide();
     })
     $('document').on('click',function(e) {
       e.stopPropagation()
