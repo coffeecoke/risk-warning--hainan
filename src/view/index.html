@@ -173,7 +173,7 @@
       $(this).siblings("ul").toggle();
       $(this).toggleClass("active");
       if($(this).parent().children('ul').length<1){
-        c$(this).addClass("active").parent().siblings().find("a").removeClass("active");
+        $(this).addClass("active").parent().siblings().find("a").removeClass("active");
         $(this).parents('.second-menu').find('a').removeClass('borderCss')
         $(this).addClass("borderCss");
       }
