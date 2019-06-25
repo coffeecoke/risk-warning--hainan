@@ -27,6 +27,7 @@
     color:#aebbe2;
     outline: none;
     padding-left:20px;
+    padding-right:20px;
     &::-webkit-input-placeholder {
       color:#aebbe2;
     }
@@ -174,6 +175,21 @@
 }
 .four-menu{
   display: none;
+  &> li > a{
+    position:relative;
+    &:before {
+      content:'';
+      width:4px;
+      height:4px;
+      background-color:#23348f;
+      border-radius: 50%;
+      left:8px;
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+
+    }
+  }
 }
 li{
   list-style: none;
