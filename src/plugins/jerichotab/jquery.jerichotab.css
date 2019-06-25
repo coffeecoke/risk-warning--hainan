@@ -60,10 +60,10 @@
 .jericho_tab .tab_pages .jericho_tabs div.tab_left {
     width: 145px;
     background-color: #e4ebf9;
-    color: #4f6ab0;
+    color: #1d3f98;
     position: relative;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .jericho_tab .tab_pages .jericho_tabs div.tab_right {
@@ -77,7 +77,7 @@
 
 .jericho_tab .tab_pages .tab_unselect .tab_left {
     background-color: #284aae !important;
-    color: #657dd6 !important;
+    color: #798ee4 !important;
     border:1px solid #3a58ae;
     border-bottom:none;
 }
