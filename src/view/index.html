@@ -64,7 +64,7 @@
                     </ul>
                   </li>
                   <li>
-                      <a href="##">二级页面111</a>
+                      <a href="##">二级页面</a>
                   </li>
             </ul>
           </li>
@@ -169,8 +169,13 @@
       }
     })
     $(".second-menu li a").click(function(){
+      $(this).removeClass("borderCss");
       $(this).siblings("ul").toggle();
-      $(this).toggleClass("active");
+      $(this).addClass("active").parent().siblings().find("a").removeClass("active");
+      if($(this).parent().children('ul').length<1){
+        $(this).parents('.second-menu').find('a').removeClass('borderCss')
+        $(this).addClass("borderCss");
+      }
     })
     $('.main').height($(window).height() - $('.header').outerHeight())
     $.fn.initJerichoTab({
@@ -200,21 +205,20 @@
       ]
     })
     // 左侧导航
-    $('.nav-list > li').hover(function() {
+    $('.nav-list > li').mouseenter(function() {
       $('.second-menu').hide();
       $(this).find('.second-menu').show()
-    })
-    $('document').on('click',function() {
-      
+    }).mouseleave(function(){
       $('.second-menu').hide();
     })
-    $('.second-menu').on('click',function(e) {
+    $('document').on('click',function(e) {
       e.stopPropagation()
-      $(this).hide()
+      $('.second-menu').hide();
     })
-
-    // 左侧导航添加标签页
-    
+    // $('.second-menu').on('click',function(e) {
+    //   e.stopPropagation()
+    //   $(this).hide()
+    // })
   })
 </script>
 

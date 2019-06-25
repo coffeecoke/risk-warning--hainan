@@ -107,6 +107,10 @@
         height:100%;
         padding-left:20px;
         color:#000;
+        &.borderCss{
+          border-left:solid 2px #072887!important;
+          background: #e5ebf9!important;
+        }
       }
       h3 {
         font-size:14px;
@@ -137,7 +141,7 @@
 }
 .second-menu {
   width:262px;
-  min-height:500px;
+  min-height:100%;
   background-color:#fff;
   box-shadow:0 0 8px #ccc;
   position:absolute;
@@ -146,30 +150,66 @@
   z-index:10;
   border-radius: 4px;
   display:none;
-  padding:0px 20px;
+  // padding:0px 20px;
   li{
     a{
-      padding:2px 20px;
-      background:url("../imgs/trun-left.png") no-repeat center left;
+      padding:5px 35px;
+      background:url("../imgs/trun-left.png") no-repeat 20px center;
       &.active{
-        background:url("../imgs/trun-down.png") no-repeat center left;
+        color:#1f2681;
+        background:url("../imgs/trun-down.png") no-repeat 20px center;
       }
       &.hovers{
+        border-left:none;
         background:none;
+        position: relative;
+        &:before{
+          content: "";
+          width:4px;
+          height:4px;
+          background-color:#23348f;
+          border-radius: 50%;
+          left:24px;
+          position:absolute;
+          top:50%;
+          transform:translateY(-50%);
+        }
+        &:hover{
+          border-left:solid 2px #072887;
+          background: #e5ebf9;
+        }
       }
     }
   }
 }
 .third-menu {
   display: none;
-  padding:0 20px;
   li{
-    padding:5 30px;
     a{
-      padding:5 30px;
-      background:url("../imgs/trun-left.png") no-repeat center left;
+      padding:5px 45px!important;
+      background:url("../imgs/trun-left.png") no-repeat 30px center;
+      &.active{
+        color:#1f2681;
+        background:url("../imgs/trun-down.png") no-repeat 30px center;
+      }
       &.hovers{
         background:none;
+        position: relative;
+        &:before{
+          content: "";
+          width:4px;
+          height:4px;
+          background-color:#23348f;
+          border-radius: 50%;
+          left:30px;
+          position:absolute;
+          top:50%;
+          transform:translateY(-50%);
+        }
+        &:hover{
+          border-left:solid 2px #072887;
+          background: #e5ebf9;
+        }
       }
     }
   }
@@ -177,6 +217,7 @@
 .four-menu{
   display: none;
   &> li > a{
+    padding:5px 60px!important;
     position:relative;
     &:before {
       content:'';
@@ -184,11 +225,18 @@
       height:4px;
       background-color:#23348f;
       border-radius: 50%;
-      left:8px;
+      left:50px!important;
       position:absolute;
       top:50%;
       transform:translateY(-50%);
-
+    }
+    &.active{
+      border-left:solid 2px #072887;
+      background: #e5ebf9;
+    }
+    &:hover{
+      border-left:solid 2px #072887;
+      background: #e5ebf9;
     }
   }
 }
@@ -197,7 +245,6 @@ li{
 }
 .four-menu {
   li{
-    padding:5px 10px;
     a{
       background: none;
     }
