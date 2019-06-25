@@ -64,7 +64,7 @@
                     </ul>
                   </li>
                   <li>
-                      <a href="##">二级页面111</a>
+                      <a href="##">二级页面</a>
                   </li>
             </ul>
           </li>
@@ -169,8 +169,12 @@
       }
     })
     $(".second-menu li a").click(function(){
+      $(this).removeClass("borderCss");
       $(this).siblings("ul").toggle();
-      $(this).toggleClass("active");
+      $(this).addClass("active").parent().siblings().find("a").removeClass("active");
+      if($(this).parent().children('ul').length<1){
+        $(this).addClass("borderCss").parent().siblings().find("a").removeClass("borderCss");
+      }
     })
     $('.main').height($(window).height() - $('.header').outerHeight())
     $.fn.initJerichoTab({
@@ -204,14 +208,14 @@
       $('.second-menu').hide();
       $(this).find('.second-menu').show()
     })
-    $('document').on('click',function() {
-      
+    $('document').on('click',function(e) {
+      e.stopPropagation()
       $('.second-menu').hide();
     })
-    $('.second-menu').on('click',function(e) {
-      e.stopPropagation()
-      $(this).hide()
-    })
+    // $('.second-menu').on('click',function(e) {
+    //   e.stopPropagation()
+    //   $(this).hide()
+    // })
   })
 </script>
 
