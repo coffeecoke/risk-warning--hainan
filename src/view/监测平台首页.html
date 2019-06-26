@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监测平台首页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/monitoring-home.css">
+</head>
+
+<body>
+    <div class="home-container">
+        <div class="home-container-header clearfix">
+            <div class="home-header-left">
+                <div class="map-chart" id="map"></div>
+            </div>
+            <div class="home-header-right">
+                <div class="header-right-top">
+                    <div class="box-summarize-left">
+                        <div class="box-title">
+                            <h4>区域概况</h4>
+                        </div>
+                        <div class="box-content">
+                            <span class="num">10000</span>
+                            <span>企业总数</span>
+                        </div>
+                    </div>
+                    <div class="box-summarize-right">
+                        <div class="box-title">
+                            <ul class="summarize-list">
+                                <li>海南省</li>
+                                <li class="active">屯昌市</li>
+                            </ul>
+                        </div>
+                        <div class="box-content">
+                            <span class="num">10000</span>
+                            <span>疑似风险企业</span>
+                        </div>
+                    </div>
+                    <div class="box-summarize-bottom">
+                        <div class="charts" id="radarChart" style="width:100%;height:200px;"></div>
+                    </div>
+                </div>
+                <div class="header-right-bottom">
+                    <div class="box-header">
+                        <h4>风险标签</h4>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-content-list">
+                            <li>网站打不开<span>(239)</span></li>
+                            <li>疑似跑路<span>(29)</span></li>
+                            <li>疑似虚假平台<span>(9)</span></li>
+                            <li>疑似超范围经营<span>(3)</span></li>
+                            <li>经营异常记录<span>(23)</span></li>
+                            <li>行政处罚记录<span>(29)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-container-bottom">
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">风险分布图<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="echarts" id="pieChart" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">高风险企业<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="high-risk-company">
+                            <ul class="high-risk-company-list">
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">新增风险企业<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="high-risk-company">
+                            <ul class="high-risk-company-list">
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                                <li>
+                                    <span class="company-name">企业名称企业名称企业名称企业名称</span>
+                                    <span class="company-num">98</span>
+                                    <span class="risk-level">高</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-container-bottom">
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">基本信息<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="echarts" id="lineChart" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box rb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">重点监测企业概览<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>股东名称</td>
+                                    <td>风险值</td>
+                                    <td>风险值</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
+                                    <td>50%</td>
+                                    <td>高</td>
+                                    <td>
+                                        <span>疑似跑路</span>
+                                        <span>行政处罚记录</span>
+                                        <span>法律诉讼记录</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-container-bottom">
+            <div class="box ab">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">重点监测企业概览<span class="num"></span></h3>
+                    </div>
+                    <div class="box-body">
+                        <ul class="enterprise-summary">
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/gssj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>工商数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/sfsj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>司法数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/jysj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>经营数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/yqsj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>舆情数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/fxsj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>周边风险数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/cjsj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>企业采集数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="../imgs/jbsj-icon.png" alt="">
+                                    </dt>
+                                    <dd>
+                                        <span class="text-color">293871690</span>
+                                        <span>举报数据</span>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/redarChart.js"></script>
+    <script src="../js/lineChart.js"></script>
+    <script src="../js/pieChart.js"></script>
+    <script src="../js/hn_zdy.js"></script>
+    <script src="../js/map-chart.js"></script>
+    <script src="../js/closeSecondMenu.js"></script>
+</body>
+
+</html>

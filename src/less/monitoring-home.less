@@ -1,0 +1,307 @@
+.home-container{
+    margin-bottom: 20px;
+}
+.home-container-header {
+    width: 100%;
+    height: 562px;
+    background: url("../imgs/map-bg.jpg") no-repeat center center;
+    overflow: hidden;
+    position: relative;
+
+    .home-header-left {
+        .map-chart {
+            width: 900px;
+            height: 560px;
+            margin: 0 auto;
+            position: relative;
+            left: -73px;
+            top: -6px;
+            background:url(../imgs/sansha-icon.png) 640px 400px no-repeat;
+        }
+    }
+
+    .home-header-right {
+        width: 390px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        padding: 20px;
+
+        .header-right-top {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            padding:10px;
+            background: #113493;
+            overflow: hidden;
+            .box-title {
+                h4 {
+                    height:40px;
+                    line-height: 40px;
+                    color: #fff;
+                }
+            }
+
+            .box-content {
+                padding: 20px 0;
+                border-right: dashed 1px #ccc;
+
+                span {
+                    text-align: center;
+                    display: block;
+                    color: #fff;
+                    padding: 10px 0 0px;
+                }
+                img {
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .num {
+                    font-size: 22px;
+                }
+            }
+            .box-summarize-left {
+                width: 130px;
+                float: left;
+
+            }
+
+            .box-summarize-right {
+                margin-left: 140px;
+                padding:0 10px;
+
+                .summarize-list {
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: solid 1px #5077c6;
+
+                    li {
+                        color: #fff;
+                        padding: 10px;
+                        font-size: 12px;
+
+                        &.active {
+                            border-bottom: solid 1px #fff;
+                        }
+                    }
+                }
+
+                .box-content {
+                    .summarize-risk {
+                        li {
+                            padding: 4px 0;
+
+                            span {
+                                color: #fff;
+                                font-size: 12px;
+                                text-align: left;
+                                display: inline-block;
+                            }
+
+                            .conmpany-type {
+                                width: 120px;
+                                padding-left: 20px;
+                            }
+
+                            .risk1 {
+                                background: url("../imgs/circular-red.png")no-repeat center left;
+                            }
+
+                            .risk2 {
+                                background: url("../imgs/circular-orange.png")no-repeat center left;
+                            }
+
+                            .risk3 {
+                                background: url("../imgs/circular-yellow.png")no-repeat center left;
+                            }
+
+                            .risk4 {
+                                background: url("../imgs/circular-blue.png")no-repeat center left;
+                            }
+
+                            .risk5 {
+                                background: url("../imgs/circular-green.png")no-repeat center left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-right-bottom {
+            margin-top: 10px;
+            margin-bottom:20px;
+            padding: 10px;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 1px #113493;
+            .box-header {
+                margin-bottom:20px;
+                h4 {
+                    color:#fff;
+                }
+            }
+
+            .box-content {
+                .box-content-list {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        font-size: 12px;
+                        padding: 4px;
+                        margin: 4px;
+                        color: #3461d9;
+                        border-radius: 5px;
+                        background: #e2e9f9;
+                        border: solid 1px #113493;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-container-bottom {
+    margin-top: 20px;
+    display: flex;
+
+    .box {
+        padding: 0 10px;
+
+        .box-con {
+            padding: 20px;
+            border-radius: 5px;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 10px 4px #d4d4d4;
+            .box-header {
+                margin-bottom:20px;
+            }
+            .box-body {
+                height:270px;
+                overflow:hidden;
+            }
+        }
+    }
+
+    .lb {
+        width: 33%;
+    }
+
+    .ab {
+        width: 100%;
+        padding: 0 25px 0 10px;
+        .box-body{
+            height:auto!important;
+        }
+    }
+
+    .rb {
+        width: 66%;
+    }
+}
+
+.box-title {
+    .num {
+        float: right;
+        width: 40px;
+        height: 20px;
+        background: url("../imgs/disc.png") no-repeat center;
+    }
+}
+
+.data-all {
+    li {
+        padding: 4px 0;
+        margin-bottom:12px;
+        span {
+            font-size: 14px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .conmpany-type {
+            color: #aaaaaa;
+            width: 120px;
+        }
+    }
+}
+.high-risk-company{
+    .high-risk-company-list{
+        li{
+            display: flex;
+            padding:10px 0;
+            cursor: pointer;
+            span{
+                font-size:14px;
+                display: inline-block;
+            }
+            .company-name{
+                width:80%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .company-num{
+                width:10%;
+            }
+            .risk-level{
+                font-size:12px;
+                text-align: center;
+                color:#fff;
+                padding:1px 15px;
+                background: #e24e35;
+            }
+        }
+    }
+}
+.table{
+    width:100%;
+    thead{
+        tr{
+            text-align: center;
+            width:100%;
+            height:35px;
+            background: #e4ebf9;
+            td{
+                border-left:solid 1px #d5ddee;
+            }
+        }
+    }
+    tbody{
+        tr{
+            font-size:14px;
+            text-align: center;
+            width:100%;
+            height:38px;
+            background: #fff;
+            td{
+                border:solid 1px #d5ddee;
+            }
+        }
+    }
+}
+.enterprise-summary{
+    display: flex;
+    li{
+        width:14.2%;
+        cursor: pointer;
+        dl{
+            display: flex;
+            dd{
+                span{
+                    display: block;
+                    font-size:14px;
+                }
+                .text-color{
+                    color:#3b5dbe;
+                    font-size:16px!important;
+                }
+            }
+        }
+    }
+}
