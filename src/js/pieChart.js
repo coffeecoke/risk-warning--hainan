@@ -3,14 +3,12 @@ $(function(){
 var chartName= ['高风险企业','中高风险企业', '中风险企业', '中低风险企业', '低风险企业'];
 var chartData= ['20','30','40','200','590']
 var data=[]
-var legendName=[]
 for (var i=0;i<chartData.length;i++){
     var c={
         value:chartData[i],
-        name:chartName[i]+chartData[i]+'家'
+        name:chartName[i]
     }
     data[i]=c;
-    legendName[i]=chartName[i]+chartData[i]+'家';
 }
 var option = {
     backgroundColor: '#fff',
@@ -29,7 +27,13 @@ var option = {
             fontSize:14,
             color: '#595959',
         },
-        data: legendName
+        formatter:function (name) {
+            for(var i=0;i<data.length;i++) {
+                if(name === data[i].name) {
+                    return name+'    '+data[i].value
+                }
+            }
+        }
     },
     series: [{
         type: 'pie',
