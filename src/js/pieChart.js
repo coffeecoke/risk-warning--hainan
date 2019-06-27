@@ -30,7 +30,7 @@ var option = {
         formatter:function (name) {
             for(var i=0;i<data.length;i++) {
                 if(name === data[i].name) {
-                    return name+'    '+data[i].value
+                    return name+'    '+data[i].value+'家'
                 }
             }
         }
