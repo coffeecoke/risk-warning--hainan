@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../plugins/jerichotab/jquery.jerichotab.css">
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -34,38 +35,88 @@
               <h3>首页</h3>
               <span>HOME</span>
             </a>
-            <ul class="second-menu">
-                <li>
-                    <a href="##">二级页面</a>
-                    <ul class="third-menu">
+            <ul class="second-menu" id="scrollWrap">
+              <li>
+                <a href="##">二级页面</a>
+                <ul class="third-menu">
+                  <li>
+                    <a href="##">三级页面</a>
+                    <ul class="four-menu">
                       <li>
-                        <a href="##">三级页面</a>
-                        <ul class="four-menu">
-                            <li>
-                              <a href="##">四级页面</a>
-                            </li>
-                            <li>
-                              <a href="##">四级页面</a>
-                            </li>
-                            <li>
-                              <a href="##">四级页面</a>
-                            </li>
-                            <li>
-                              <a href="##">四级页面</a>
-                            </li>
-                        </ul>
+                        <a href="##">四级页面</a>
                       </li>
                       <li>
-                        <a href="##">三级页面</a>
+                        <a href="##">四级页面</a>
                       </li>
                       <li>
-                        <a href="##">三级页面</a>
+                        <a href="##">四级页面</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                      <a href="##">二级页面</a>
+                    <a href="##">三级页面</a>
+                    <ul class="four-menu">
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                    </ul>
                   </li>
+                  <li>
+                    <a href="##">三级页面</a>
+                  </li>
+                  <li>
+                    <a href="##">三级页面</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="##">二级页面</a>
+                <ul class="third-menu">
+                  <li>
+                    <a href="##">三级页面</a>
+                    <ul class="four-menu">
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="##">三级页面</a>
+                    <ul class="four-menu">
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                      <li>
+                        <a href="##">四级页面</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="##">三级页面</a>
+                  </li>
+                  <li>
+                    <a href="##">三级页面</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="##">二级页面</a>
+              </li>
             </ul>
           </li>
           <li class="sjbs">
@@ -153,29 +204,49 @@
             </a>
           </li>
         </ul>
-        
+
       </div>
       <div class="right-main"></div>
     </div>
   </div>
 </body>
 <script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../plugins/jerichotab/jquery.jerichotab.js"></script>
 <script>
   $(function () {
+    $('#scrollWrap').mCustomScrollbar({
+      autoHideScrollbar: false,
+      autoExpandScrollbar: false,
+      autoDraggerLength: false,
+      scrollButtons: {
+        enable: false,
+        tabindex: 10
+      },
+      advanced: {
+        autoExpandHorizontalScroll: true,
+        updateOnContentResize: true,
+        updateOnBrowserResize: true
+      },
+      theme: "dark"
+    });
     // 以及交互逻辑
-   //$()
+    //$()
     // 二级交互逻辑
-    $(".second-menu li a").each(function(){
-      if($(this).parent().children('ul').length<1){
+    $(".second-menu li a").each(function () {
+      if ($(this).next('ul').length > 0) {
+        $(this).addClass('active')
+        $(this).next('ul').show()
+      } else {
         $(this).addClass("hovers");
+
       }
     })
-    $(".second-menu li a").click(function(){
+    $(".second-menu li a").click(function () {
       $(this).removeClass("borderCss");
       $(this).siblings("ul").toggle();
       $(this).toggleClass("active");
-      if($(this).parent().children('ul').length<1){
+      if ($(this).parent().children('ul').length < 1) {
         $(this).addClass("active").parent().siblings().find("a").removeClass("active");
         $(this).parents('.second-menu').find('a').removeClass('borderCss')
         $(this).addClass("borderCss");
@@ -219,13 +290,13 @@
       ]
     })
     // 左侧导航
-    $('.nav-list > li').mouseenter(function() {
+    $('.nav-list > li').mouseenter(function () {
       $('.second-menu').hide();
       $(this).find('.second-menu').show()
-    }).mouseleave(function(){
+    }).mouseleave(function () {
       $('.second-menu').hide();
     })
-    $('document').on('click',function(e) {
+    $('document').on('click', function (e) {
       e.stopPropagation()
       $('.second-menu').hide();
     })
