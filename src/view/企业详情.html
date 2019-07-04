@@ -59,10 +59,14 @@
   <script>
     $(function () {
       $(window).load(function() {
-        var defaultIframeSrc = '风险概览.html';
-        $('.iframe-content').height($(window).height()-$('.banner').outerHeight()-10)
-        $('.iframe-content > iframe').attr('src',defaultIframeSrc)
+        var timer = setTimeout(function(){
+          clearTimeout(timer)
+          var defaultIframeSrc = '风险概览.html';
+          $('.iframe-content').height($(window).height()-$('.banner').outerHeight()-10)
+          $('.iframe-content > iframe').attr('src',defaultIframeSrc)
+        },30)
       })
+      
       $('.tabs').on('click','li',function () {
         var href = $(this).data('href');
         $(this).addClass('active').siblings().removeClass('active')

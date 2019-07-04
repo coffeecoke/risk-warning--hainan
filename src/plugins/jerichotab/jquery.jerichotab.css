@@ -62,8 +62,9 @@
     background-color: #e4ebf9;
     color: #1d3f98;
     position: relative;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-radius: 15px;
+    /* border-top-left-radius: 6px;
+    border-top-right-radius: 6px; */
 }
 
 .jericho_tab .tab_pages .jericho_tabs div.tab_right {
@@ -191,7 +192,7 @@
     clear: both;
     width: 100%;
     /* background-color:#fff; */
-    padding-top: 0px;
+    padding-top: 10px;
 }
 
 .jericho_tab .tab_content div.content {

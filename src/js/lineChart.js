@@ -127,4 +127,7 @@ $(function(){
     };
 
     myChart.setOption(option);
+    $(window).resize(function () {
+        myChart.resize();
+    })
 })
