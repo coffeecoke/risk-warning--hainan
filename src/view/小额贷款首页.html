@@ -1,12 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/microfinance.css">
 </head>
+
 <body>
-  
+  <div class="box-content">
+    <div class="box-microfinance">
+      <div class="box cb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">小额贷款公司行业指标
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="up-down">
+              <ul class="up-down-list">
+                <li class="up">
+                  <span class="num-red">
+                    <i>4343</i>家</span>
+                  <span>企业数量</span>
+                </li>
+                <li class="middle">
+                  <span class="num-black">
+                    <i>52.9</i>亿元</span>
+                  <span>活跃投资人</span>
+                </li>
+                <li class="up">
+                  <span class="num-red">
+                    <i>11</i>%</span>
+                  <span>活跃借款人</span>
+                </li>
+                <li class="down">
+                  <span class="num-blue">
+                    <i>712.21</i>元</span>
+                  <span>当月交易金额</span>
+                </li>
+                <li class="up">
+                  <span class="num-red">
+                    <i>11.23</i>亿元</span>
+                  <span>当月交易笔数</span>
+                </li>
+                <li class="up">
+                  <span class="num-red">
+                    <i>135</i>笔</span>
+                  <span>贷款余额</span>
+                </li>
+                <li class="down">
+                  <span class="num-blue">
+                    <i>10</i>%</span>
+                  <span>逾期率</span>
+                </li>
+                <li class="up">
+                  <span class="num-red">
+                    <i>123</i>亿元</span>
+                  <span>净资产收益率</span>
+                </li>
+                <li class="middle">
+                  <span class="num-black">
+                    <i>12</i>%</span>
+                  <span>营业收入增长率</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box cb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">行业长城指数
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="charts" id="lineChart1" style="width:100%;height:100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-microfinance">
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">风险企业分布图
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="charts" id="pieChart1" style="width:100%;height:100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">最新工商信息变更企业
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="high-risk-company">
+              <ul class="high-risk-company-list">
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">注册资本变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">股东变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">董监高变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">企业名称变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">经营范围变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">经营范围变更</span>
+                  <span class="risk-level">2019-07-01</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">行业长城指数
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="charts" id="radarChart1" style="width:100%;height:100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-microfinance box-high">
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">长城指数涨跌榜
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="rise-and-fall">
+              <ul class="rise-fall">
+                <li class="active">涨幅榜</li>
+                <li>跌幅榜</li>
+              </ul>
+              <div class="rise-fall-all">
+                <div class="rise-fall-list active">
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司11</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                </div>
+                <div class="rise-fall-list green-color">
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">合规风险企业TOP10
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="high-risk-company">
+              <ul class="high-risk-company-list">
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">不良贷款率TOP10
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="high-risk-company">
+              <ul class="high-risk-company-list">
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+                <li>
+                  <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                  <span class="company-num">30</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-microfinance box-high">
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">报送绩效通报批评
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="rise-and-fall">
+              <ul class="rise-fall">
+                <li class="active">迟报</li>
+                <li>漏报</li>
+              </ul>
+              <div class="rise-fall-all">
+                <div class="rise-fall-list active">
+                  <div class="list-content green-color">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司11</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                </div>
+                <div class="rise-fall-list green-color">
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司22</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">20.98%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">企业评级红黑榜
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="rise-and-fall">
+              <ul class="rise-fall">
+                <li class="active">红榜</li>
+                <li>黑榜</li>
+              </ul>
+              <div class="rise-fall-all">
+                <div class="rise-fall-list active">
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司11</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级</span>
+                  </div>
+                </div>
+                <div class="rise-fall-list">
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司22</span>
+                    <span class="company-num">C级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">B级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级 </span>
+                  </div>
+                  <div class="list-content">
+                    <span class="company-name">中软融鑫计算机系统工程有限公司</span>
+                    <span class="company-num">A级 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box lb">
+        <div class="box-con">
+          <div class="box-header">
+            <h3 class="box-title">P2P风险企业TOP10
+              <span class="num"></span>
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="high-risk-company">
+              <ul class="high-risk-company-list">
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">中高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">中高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">中高</span>
+                </li>
+                <li>
+                  <span class="company-name">北京中软融鑫计算机系统</span>
+                  <span class="company-num">98</span>
+                  <span class="risk-level">中</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery-1.8.3.min.js"></script>
+  <script src="../js/echarts.js"></script>
+  <script src="../js/xe-lineChart.js"></script>
+  <script src="../js/xe-pieChart.js"></script>
+  <script src="../js/xe-radarChart.js"></script>
+  <script>
+    $(".rise-fall li").each(function (i) {
+      $(this).click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".rise-fall-all .rise-fall-list").eq(i).show().siblings().hide();
+      })
+    })
+  </script>
 </body>
+
 </html>

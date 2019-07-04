@@ -1,0 +1,272 @@
+.box-microfinance {
+    margin-top: 20px;
+    display: flex;
+
+    .box {
+        padding: 0 10px;
+
+        .box-con {
+            padding: 20px;
+            border-radius: 5px;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 10px 4px #d4d4d4;
+
+            .box-header {
+                margin-bottom: 10px;
+            }
+
+            .box-body {
+                height: 270px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .cb {
+        width: 50%;
+    }
+
+    .lb {
+        width: 33%;
+    }
+
+    .ab {
+        width: 100%;
+        padding: 0 25px 0 10px;
+
+        .box-body {
+            height: auto !important;
+        }
+    }
+
+    .rb {
+        width: 66%;
+    }
+}
+
+.box-title {
+    .num {
+        float: right;
+        width: 40px;
+        height: 20px;
+        background: url("../imgs/disc.png") no-repeat center;
+    }
+}
+
+.high-risk-company {
+    .high-risk-company-list {
+        li {
+            display: flex;
+            padding: 10px 0;
+            cursor: pointer;
+            border-bottom: solid 1px #ddd;
+
+            span {
+                font-size: 14px;
+                display: inline-block;
+            }
+
+            .company-name {
+                width: 50%;
+                color: #404040;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .company-num {
+                width: 30%;
+                font-size: 14px;
+                color: #8a8a8a;
+            }
+
+            .risk-level {
+                width: 20%;
+                text-align: right;
+                font-size: 12px;
+                color: #999999;
+            }
+
+            .middle-risk-level {
+                width: 44px;
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                background: #ffa000;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.box-high {
+    .box {
+        .box-body {
+            height: auto !important;
+
+            .company-name {
+                width: 90%;
+            }
+
+            .company-num {
+                width: 10%;
+            }
+        }
+    }
+}
+
+.rise-fall {
+    display: flex;
+    border-bottom: solid 2px #f7f7f7;
+
+    li {
+        padding: 8px;
+
+        &.active {
+            border-bottom: solid 2px #1d3f98;
+        }
+    }
+
+}
+
+.box-high {
+    .rise-fall-list {
+        display: none;
+
+        .list-content {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: solid 1px #ccc;
+
+            span {
+                font-size: 14px;
+                display: inline-block;
+            }
+
+            .company-name {
+                width: 80%;
+                color: #404040;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .company-num {
+                width: 20%;
+                color: #f82e2e;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .high-risk-company {
+        .high-risk-company-list {
+            li {
+                display: flex;
+                padding: 10px 0;
+                cursor: pointer;
+                border-bottom: solid 1px #ddd;
+
+                span {
+                    font-size: 14px;
+                    display: inline-block;
+                }
+
+                .company-name {
+                    width: 80%;
+                    color: #404040;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .company-num {
+                    width: 10%;
+                    font-size: 14px;
+                    color: #8a8a8a;
+                }
+
+                .risk-level {
+                    width: 10%;
+                    text-align: right;
+                    font-size: 12px;
+                    color: #999999;
+                }
+
+                .middle-risk-level {
+                    width: 10%;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #fff;
+                    background: #ffa000;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+.green-color {
+    .list-content {
+        .company-num {
+            color: #79bd84 !important;
+        }
+    }
+}
+
+.up-down-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        width: 33.3%;
+        text-align: left;
+        padding: 18px 0 18px 50px;
+
+        span {
+            display: block;
+            color: #999999;
+
+            i {
+                padding-right: 5px;
+            }
+
+            &.num-red {
+                i {
+                    font-weight: bolder;
+                    color: #f05560;
+                }
+            }
+
+            &.num-blue {
+                i {
+                    font-weight: bolder;
+                    color: #5471cf;
+                }
+            }
+
+            &.num-black {
+                i {
+                    font-weight: bolder;
+
+                    color: #000;
+                }
+            }
+        }
+
+        &.up {
+            background: url("../imgs/arrow-top.png") no-repeat 20px 20px;
+        }
+
+        &.down {
+            background: url("../imgs/arrow-bottom.png") no-repeat 20px 20px;
+        }
+
+        &.middle {
+            background: url("../imgs/arrow-center.png") no-repeat 20px 20px;
+        }
+    }
+}
