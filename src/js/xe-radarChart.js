@@ -68,11 +68,11 @@ $(function () {
         //   trigger: 'item'
         // },
         symbol: 'circle',
-        symbolSize: 0,
+        symbolSize: 6,
         itemStyle: {
           normal: {
-            //color: '',
-             //borderColor: 'yellow'
+            color: '#3a59b0',
+             borderColor: '#3a59b0'
           }
         },
         areaStyle: {
