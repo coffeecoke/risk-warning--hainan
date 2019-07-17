@@ -13,7 +13,7 @@
   {"name":"昌江县","code":"1312","total":0,"riskRating":1,"inflow":0.5,"outflow":0.22,"risk":0,"highRisk":0,"Detection":372,"illegal":6},
   {"name":"临高县","code":"1313","total":0,"riskRating":2,"inflow":0.23,"outflow":0.11,"risk":0,"highRisk":0,"Detection":535,"illegal":6},
   {"name":"陵水县","code":"1314","total":0,"riskRating":3,"inflow":0.11,"outflow":0.05,"risk":0,"highRisk":0,"Detection":269,"illegal":6},
-  {"name":"屯昌县","code":"1315","total":0,"riskRating":4,"inflow":0.09,"outflow":0.04,"risk":0,"highRisk":0,"Detection":210,"illegal":6},
+  {"name":"屯昌县","code":"1315","total":0,"riskRating":4,"inflow":0.09,"outflow":0.04,"risk":0,"highRisk":0,"Detection":210,"illegal":6,"selected":true},
   {"name":"定安县","code":"1316","total":0,"riskRating":5,"inflow":0.06,"outflow":0.27,"risk":0,"highRisk":0,"Detection":141,"illegal":6},
   {"name":"保亭县","code":"1317","total":0,"riskRating":1,"inflow":0.07,"outflow":0.03,"risk":0,"highRisk":0,"Detection":159,"illegal":6},
   {"name":"五指山市","code":"1318","total":0,"riskRating":2,"inflow":0.16,"outflow":0.07,"risk":0,"highRisk":0,"Detection":148,"illegal":6}

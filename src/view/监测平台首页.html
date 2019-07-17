@@ -12,50 +12,63 @@
 
 <body>
     <div class="home-container">
-        <div class="home-container-header clearfix">
-            <div class="home-header-left">
-                <div class="map-chart" id="map"></div>
-            </div>
-            <div class="home-header-right">
-                <div class="header-right-top">
-                    <div class="box-summarize-left">
-                        <div class="box-title">
-                            <h4>区域概况</h4>
-                        </div>
-                        <div class="box-content">
-                            <span class="num">10000</span>
-                            <span>企业总数</span>
-                        </div>
-                    </div>
-                    <div class="box-summarize-right">
-                        <div class="box-title">
-                            <ul class="summarize-list">
-                                <li>海南省</li>
-                                <li class="active">屯昌市</li>
-                            </ul>
-                        </div>
-                        <div class="box-content border-none">
-                            <span class="num">10000</span>
-                            <span>疑似风险企业</span>
-                        </div>
-                    </div>
-                    <div class="box-summarize-bottom">
-                        <div class="charts" id="radarChart" style="width:100%;height:200px;"></div>
-                    </div>
+        <div class="modal" style="overflow:auto">
+            <span class="close-modal"></span>
+            <div class="home-container-header clearfix">
+                <div class="home-header-left">
+                    <div class="map-chart2" id="map2"></div>
                 </div>
-                <div class="header-right-bottom">
-                    <div class="box-header">
-                        <h4>风险标签</h4>
+                <div class="home-header-right">
+                    <div class="header-right-top">
+                        <div class="box">
+                            <div class="box-con">
+                                <div class="box-header">
+                                    <h3 class="box-title">风险概况</h3>
+                                    <ul class="city-toggle">
+                                        <li>海南省</li>
+                                        <li class="active">屯昌县</li>
+                                    </ul>
+                                </div>
+                                <div class="box-body" style="height:360px;">
+                                    <div class="risk-summary">
+                                        <div class="company-nums">
+                                            <p class="nums">
+                                                <span>43597</span>家
+                                            </p>
+                                            <p class="title">企业总数</p>
+                                        </div>
+                                        <div class="risk-compony">
+                                            <p class="nums">
+                                                <span>43597</span>家
+                                            </p>
+                                            <p class="title">疑似风险企业</p>
+                                        </div>
+                                    </div>
+                                    <div class="charts" id="radarChart2" style="width:100%;height:200px;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box-content">
-                        <ul class="box-content-list">
-                            <li>网站打不开<span>(239)</span></li>
-                            <li>疑似跑路<span>(29)</span></li>
-                            <li>疑似虚假平台<span>(9)</span></li>
-                            <li>疑似超范围经营<span>(3)</span></li>
-                            <li>经营异常记录<span>(23)</span></li>
-                            <li>行政处罚记录<span>(29)</span></li>
-                        </ul>
+                    <div class="header-right-bottom">
+                        <div class="box">
+                            <div class="box-con">
+                                <div class="box-header">
+                                    <h3 class="box-title">风险标签</h3>
+                                </div>
+                                <div class="box-body" style="height:260px;">
+                                    <div class="risk-labels">
+                                        <div class="risk-label">网站打不开【239】</div>
+                                        <div class="risk-label">疑似跑路【220】</div>
+                                        <div class="risk-label">疑似超范围经营【198】</div>
+                                        <div class="risk-label">行政处罚记录【168】</div>
+                                        <div class="risk-label">网站打不开【239】</div>
+                                        <div class="risk-label">疑似跑路【220】</div>
+                                        <div class="risk-label">疑似超范围经营【198】</div>
+                                        <div class="risk-label">行政处罚记录【168】</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,7 +77,72 @@
             <div class="box lb">
                 <div class="box-con">
                     <div class="box-header">
-                        <h3 class="box-title">风险分布图<span class="num"></span></h3>
+                        <h3 class="box-title">风险概况</h3>
+                    </div>
+                    <div class="box-body" style="height:360px;">
+                        <div class="risk-summary">
+                            <div class="company-nums">
+                                <p class="nums">
+                                    <span>43597</span>家
+                                </p>
+                                <p class="title">企业总数</p>
+                            </div>
+                            <div class="risk-compony">
+                                <p class="nums">
+                                    <span>43597</span>家
+                                </p>
+                                <p class="title">疑似风险企业</p>
+                            </div>
+                        </div>
+                        <div class="charts" id="radarChart1" style="width:100%;height:230px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">风险地图</h3>
+                        <span class="resize-btn"></span>
+                    </div>
+                    <div class="box-body" style="height:360px;padding:0;">
+                        <div class="map-chart1" id="map1"></div>
+                        <div class="sanshan"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header">
+                        <h3 class="box-title">风险标签</h3>
+                    </div>
+                    <div class="box-body" style="height:360px;">
+                        <div class="risk-labels">
+                            <div class="risk-label">网站打不开【239】</div>
+                            <div class="risk-label">疑似跑路【220】</div>
+                            <div class="risk-label">疑似超范围经营【198】</div>
+                            <div class="risk-label">行政处罚记录【168】</div>
+                            <div class="risk-label">网站打不开【239】</div>
+                            <div class="risk-label">疑似跑路【220】</div>
+                            <div class="risk-label">疑似超范围经营【198】</div>
+                            <div class="risk-label">行政处罚记录【168】</div>
+                            <div class="risk-label">网站打不开【239】</div>
+                            <div class="risk-label">疑似跑路【220】</div>
+                            <div class="risk-label">疑似超范围经营【198】</div>
+                            <div class="risk-label">行政处罚记录【168】</div>
+                            <div class="risk-label">网站打不开【239】</div>
+                            <div class="risk-label">疑似跑路【220】</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-container-bottom">
+            <div class="box lb">
+                <div class="box-con">
+                    <div class="box-header ">
+                        <h3 class="box-title">风险分布图</h3>
+                        <span class="num"></span>
                     </div>
                     <div class="box-body">
                         <div class="echarts" id="pieChart" style="width:100%;height:100%;"></div>
@@ -73,8 +151,9 @@
             </div>
             <div class="box lb">
                 <div class="box-con">
-                    <div class="box-header">
-                        <h3 class="box-title">高风险企业<span class="num"></span></h3>
+                    <div class="box-header ">
+                        <h3 class="box-title">高风险企业</h3>
+                        <span class="num"></span>
                     </div>
                     <div class="box-body">
                         <div class="high-risk-company">
@@ -116,8 +195,9 @@
             </div>
             <div class="box lb">
                 <div class="box-con">
-                    <div class="box-header">
-                        <h3 class="box-title">新增风险企业<span class="num"></span></h3>
+                    <div class="box-header ">
+                        <h3 class="box-title">新增风险企业</h3>
+                        <span class="num"></span>
                     </div>
                     <div class="box-body">
                         <div class="high-risk-company">
@@ -162,7 +242,8 @@
             <div class="box lb">
                 <div class="box-con">
                     <div class="box-header">
-                        <h3 class="box-title">基本信息<span class="num"></span></h3>
+                        <h3 class="box-title box-title-border">风险处置情况</h3>
+                        <span class="num"></span>
                     </div>
                     <div class="box-body">
                         <div class="echarts" id="lineChart" style="width:100%;height:100%;"></div>
@@ -172,7 +253,8 @@
             <div class="box rb">
                 <div class="box-con">
                     <div class="box-header">
-                        <h3 class="box-title">重点监测企业概览<span class="num"></span></h3>
+                        <h3 class="box-title box-title-border">重点监测企业概览</h3>
+                        <span class="num"></span>
                     </div>
                     <div class="box-body">
                         <table class="table">
@@ -181,7 +263,7 @@
                                     <td>股东名称</td>
                                     <td>风险值</td>
                                     <td>风险值</td>
-                                    <td>操作</td>
+                                    <td>风险标签</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -190,9 +272,9 @@
                                     <td>50%</td>
                                     <td>高</td>
                                     <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
+                                        <div class="risk-label">疑似超范围经营</div>
+                                        <div class="risk-label">疑似跑路</div>
+                                        <div class="risk-label">行政处罚记录</div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -200,9 +282,8 @@
                                     <td>50%</td>
                                     <td>高</td>
                                     <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
+                                        <div class="risk-label">疑似超范围经营</div>
+                                        <div class="risk-label">疑似跑路</div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -210,9 +291,8 @@
                                     <td>50%</td>
                                     <td>高</td>
                                     <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
+                                        <div class="risk-label">疑似超范围经营</div>
+                                        <div class="risk-label">疑似跑路</div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -220,29 +300,8 @@
                                     <td>50%</td>
                                     <td>高</td>
                                     <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
-                                    <td>50%</td>
-                                    <td>高</td>
-                                    <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>北京中软融鑫计算机系统工程有限公司 </td>
-                                    <td>50%</td>
-                                    <td>高</td>
-                                    <td>
-                                        <span>疑似跑路</span>
-                                        <span>行政处罚记录</span>
-                                        <span>法律诉讼记录</span>
+                                        <div class="risk-label">疑似超范围经营</div>
+                                        <div class="risk-label">疑似跑路</div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -255,7 +314,7 @@
             <div class="box ab">
                 <div class="box-con">
                     <div class="box-header">
-                        <h3 class="box-title">重点监测企业概览<span class="num"></span></h3>
+                        <h3 class="box-title">重点监测企业概览</h3>
                     </div>
                     <div class="box-body">
                         <ul class="enterprise-summary">
@@ -350,6 +409,17 @@
     <script src="../js/hn_zdy.js"></script>
     <script src="../js/map-chart.js"></script>
     <script src="../js/closeSecondMenu.js"></script>
+    <script>
+        $(function () {
+            $('.resize-btn').on('click', function () {
+                $('.modal').fadeIn()
+                radarChart2.resize()
+            })
+            $('.close-modal').on('click', function () {
+                $('.modal').fadeOut()
+            })
+        })
+    </script>
 </body>
 
 </html>

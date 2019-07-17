@@ -43,12 +43,23 @@ $(function(){
         color:["#4888f8","#fad240","#f86a6a"],
         legend: {
             data: [
-                {name:'预警信息'},
-                {name:'线索'},
-                {name:'领导交办'}
+                {
+                    name:'预警信息',
+                    icon:'circle'
+                },
+                {
+                    name:'线索',
+                    icon:'circle'
+                },
+                {
+                    name:'领导交办',
+                    icon:'circle'
+                }
             ],
             left:'right',
-            top:5
+            top:2,
+            itemWidth: 6,
+            itemHeight: 6
         },
         xAxis: [{
             type: 'category',

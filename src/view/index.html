@@ -251,12 +251,12 @@
         $(this).addClass("borderCss");
       }
     })
-    $('.main').height($(window).height() - $('.header').outerHeight())
+    $('.right-main').height($(window).height() - $('.header').outerHeight())
     $.fn.initJerichoTab({
       renderTo: '.right-main',
       uniqueId: 'myJerichoTab',
       contentCss: {
-        'height': $('.right-main').height() - 40
+        'height': $('.right-main').height() - 20
       },
       tabs: [{
           title: '企业详情',

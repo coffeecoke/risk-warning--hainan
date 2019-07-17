@@ -1,10 +1,10 @@
 .header {
-  height:136px;
+  height:110px;
   background-color:#1d3f98;
   .logo {
-    width:140px;
-    height:104px;
-    background:url(../imgs/logo.png) center no-repeat;
+    width:380px;
+    height:50px;
+    background:url(../imgs/logo-text.png) center no-repeat;
     float:left;
     margin-top:18px;
     margin-left:20px;
@@ -15,15 +15,15 @@
   margin-right:24px;
   .form-group {
     display:inline-block;
-    margin-top:12px;
+    margin-top:20px;
     position: relative;
   }
   .form-control {
-    width:240px;
-    height:34px;
+    width:400px;
+    height:40px;
     border:1px solid #072887;
     background-color:#163caa;
-    border-radius: 17px;
+    border-radius: 4px;
     color:#aebbe2;
     outline: none;
     padding-left:20px;
@@ -34,7 +34,7 @@
   }
   .search-btn {
     width:34px;
-    height:34px;
+    height:40px;
     position: absolute;
     right:0;
     top:0;
@@ -90,9 +90,11 @@
 .left-side {
   width:184px;
   height:100%;
+  position: absolute;
+  bottom:0;
   background-color:#f7f7f7;
   padding:16px 0;
-  position:relative;
+  overflow:auto;
 }
 .nav-list {
     &> li {
@@ -420,11 +422,25 @@ li{
   }
 }
 .right-main {
-  position: absolute;
-  left:184px;
-  right:18px;
-  bottom:0;
-  top:-85px;
+  position: relative;
+  height:100%;
+  margin-left:184px;
+  background-color:#f7f7f7;
+}
+.jericho_tab {
+  height:100%;
+  overflow:scroll !important;
+}
+.jericho_tab:after {
+  content:'';
+  display:table;
+  clear: both;
+}
+.jericho_tab .tab_pages{
+  position:absolute;
+  top:-41px;
+  left:0;
+  right:0;
 }
 .jericho_tab .tab_content {
   // background-color:#fff;
