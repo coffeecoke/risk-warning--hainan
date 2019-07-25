@@ -28,9 +28,25 @@ var option = {
             color: '#595959',
         },
         formatter:function (name) {
-            for(var i=0;i<data.length;i++) {
-                if(name === data[i].name) {
-                    return name+'    '+data[i].value+'家'
+            function DataLength(fData) {
+                var intLength = 0
+                for (var i = 0; i < fData.length; i++) {
+                    if ((fData.charCodeAt(i) < 0) || (fData.charCodeAt(i) > 255))
+                        intLength = intLength + 2
+                    else
+                        intLength = intLength + 1
+                }
+                return intLength
+            }
+
+            for (var i = 0; i < data.length; i++) {
+                if (name === data[i].name) {
+                    if(DataLength(name)===10) {
+                        return name + '      ' + data[i].value + '家'
+                    }else {
+                        return name + '   ' + data[i].value + '家'
+                    }
+                    
                 }
             }
         }
